@@ -1,0 +1,107 @@
+<ion-header>
+  <ion-toolbar color="light">
+
+    <div class="small" >
+      Settings
+    </div>
+    <ion-buttons slot="start">
+      <ion-button color="secondary" (click)="back()" >
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="welcome-card">
+    <ion-card-header>
+      <ion-card-subtitle>
+            <ion-label class="small">General Details</ion-label>
+      </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+            <ion-col>
+              <ion-item>
+                <ion-label  class="label" position="floating" stacked>Usermane</ion-label>
+                <ion-input color="dark" class="input" disabled value={{username}}></ion-input>
+              </ion-item>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label  class="label" position="floating" stacked>Fulname</ion-label>
+              <ion-input color="dark" class="input" disabled value={{name}}></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label  class="label" position="floating" stacked>Email</ion-label>
+              <ion-input color="dark" class="input" disabled value={{email}}></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label  class="label" position="floating" stacked>Contry</ion-label>
+              <ion-input color="dark" class="input" disabled value={{country}}></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label  class="label" position="floating" stacked>Roles</ion-label>
+              <ion-input color="dark" class="input" disabled value={{roles}}></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label  class="label" position="floating" stacked>Offices</ion-label>
+              <ion-input color="dark" class="input" disabled value={{office}}></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label  class="label" position="floating" stacked>Device Identification</ion-label>
+              <ion-input color="dark" class="input" disabled value={{uniqueId}}></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <!-- <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label  class="label" position="floating" stacked>Contry</ion-label>
+              <ion-input color="dark" class="input" disabled value={{country}}></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-row>
+            <ion-col>
+              <ion-item>
+                <ion-label  class="label" position="floating" stacked>Roles</ion-label>
+                <ion-input color="dark" class="input" disabled value={{roles}}></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-row> 
+            <ion-col>
+              <ion-item>
+                <ion-label  class="label" position="floating" stacked>Roles</ion-label>
+                <ion-input color="dark" class="input" disabled value={{roles}}></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+      </ion-row> -->
+      </ion-grid>
+    </ion-card-content>
+</ion-card>
+</ion-content>

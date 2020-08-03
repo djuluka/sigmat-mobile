@@ -1,0 +1,133 @@
+
+
+.diag {
+    position: absolute;
+    z-index: 1;
+    width:100%;
+    top: 0;
+    height:66%;
+  }
+  
+  
+  h2 {
+      margin-top:80% !important;
+      font-weight:bold;
+      font-size:1em;
+  }
+  
+  p {
+      width:80%;
+      display:block;
+      margin: 0 auto;
+      font-size:.9em;
+  }
+  
+  .swiper-pagination-bullet-active {
+      background:#C400FF;
+  }
+  
+  .swiper-pagination {
+      bottom: 12% !important;
+  }
+  
+  #skip {
+      position:absolute;
+      bottom: 20px;
+      width:100%;
+      background:none !important;
+      text-align:center;
+      cursor:pointer;
+      z-index:5;
+  }
+
+  :root {
+    --ion-safe-area-top: 20px;
+    --ion-safe-area-bottom: 22px;
+  }
+
+
+  .card {
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	width: 300px;
+}
+
+.card-header img {
+	object-fit: cover;
+	height: 200px;
+	width: 100%;
+}
+
+.card-body {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	padding: 20px;
+	min-height: 250px;
+}
+
+.card-body h4 {
+	margin: 10px 0;
+}
+
+.card-body p {
+	font-size: 13px;
+	margin: 0 0 40px;
+}
+
+.tag {
+	background-color: #fff;
+	border-radius: 50px;
+	font-size: 12px;
+	color: #fff;
+	margin: 0;
+	padding: 2px 10px;
+	text-transform: uppercase;
+}
+
+.tag-teal {
+	background-color: #92d4e4;
+}
+
+.tag-purple {
+	background-color: #3d1d94;
+}
+
+.tag-pink {
+	background-color: #c62bcb;
+}
+
+.user {
+	display: flex;
+	margin-top: auto;
+}
+
+.user img {
+	border-radius: 50%;
+	margin-right: 10px;
+	height: 40px;
+	width: 40px;
+}
+
+.user-info h5 {
+	margin: 0;
+}
+
+.user-info small {
+	color: #888785;
+}
+
+
+.left {
+    float: left;
+    width: 300px;
+    border: 3px solid #73AD21;
+    padding: 10px;
+  }
+
+  h4.onboard {text-align: left}
+
+
+

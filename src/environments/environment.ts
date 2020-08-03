@@ -3,7 +3,13 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+
+  keycloakRootUrl: 'http://localhost:8089/auth/realms/rtis/protocol/openid-connect/token',
+  clientId: 'spring-boot-app',
+  grantType : 'password',
+
+  transitUsr: 'http://localhost:8085/api/v1/',
 };
 
 /*
@@ -14,3 +20,6 @@ export const environment = {
  * on performance if an error is thrown.
  */
 // import 'zone.js/dist/zone-error';  // Included with Angular CLI.
+
+
+
