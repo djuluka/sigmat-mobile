@@ -1,5 +1,37 @@
 {
-    "Title":"Welcome to Sigmat",
-    "Welcone_Text":"Now that your app has been created, you'll want to start building out features and components. Check out some of the resources below for next steps. "
+  "onboard": {
+      "skip":"Skip"
+  },
+  "home": {
+      "welcome": "Welcome"
 
+  },
+  "login": {
+      "tabName": "Tab One goes here",
+      "invite": "Now you have selected {{lang}}",
+      "languageChangePlaceholder": "Change language"
+    },
+    "details": {
+      "tabName": "Tab One goes here",
+      "invite": "Now you have selected {{lang}}",
+      "languageChangePlaceholder": "Change language"
+    },
+    "settings": {
+      "general": "General Info",
+      "settings": "Settings",
+      "language": "Language",
+      "username":"Username",
+      "fullname":"Fullname",
+      "email":"Email",
+      "country":"country",
+      "roles":"Roles",
+      "offices":"Offices",
+      "device":"ID",
+      "longitude":"Longitude",
+      "latitude":"Latitude",
+      "address":"Address",
+      "profile":"User Profile",
+      "office":"Estancia e Geolocalização"
+      
+    }
 }

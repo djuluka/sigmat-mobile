@@ -4,22 +4,16 @@
 
 export const environment = {
   production: false,
-
-  keycloakRootUrl: 'http://localhost:8089/auth/realms/rtis/protocol/openid-connect/token',
   clientId: 'spring-boot-app',
   grantType : 'password',
-
-  transitUsr: 'http://localhost:8085/api/v1/',
+  backend_network_error: 'The backend Serer is not available',
+  //t1Url: 'https://41.215.215.21:8443',
+  //api: 'http://192.168.1.252:8443',
+  //api: 'https://192.168.2.124:8443',
+  api: 'http://127.0.0.1:8080',
+  api2:'http://sydonia.otr.tg:8080/awclient/',
 };
-
-/*
- * For easier debugging in development mode, you can import the following file
- * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
- *
- * This import should be commented out in production mode because it will have a negative impact
- * on performance if an error is thrown.
- */
-// import 'zone.js/dist/zone-error';  // Included with Angular CLI.
-
-
+export const KEYCLOAk_URL = 'http://localhost:8089/auth/realms/rtis/protocol/openid-connect/token';
+export const BACKEND_URL = 'http://localhost:8085/api/v1/';
+export const BACKEND_NETWORK_ERROR = 'The backend Serer is not available';
 

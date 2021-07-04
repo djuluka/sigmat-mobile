@@ -1,3 +1,24 @@
 {
-    "Title":"Bienvenue  a Sigmat"
-}
+    "onboard": {
+        "skip":"Suivant"
+    },
+    "home": {
+        "welcome": "Bienvenue"
+        
+    },
+    "login": {
+        "tabName": "Tab One goes here",
+        "invite": "Now you have selected {{lang}}",
+        "languageChangePlaceholder": "Change language"
+      },
+      "details": {
+        "tabName": "Tab One goes here",
+        "invite": "Now you have selected {{lang}}",
+        "languageChangePlaceholder": "Change language"
+      },
+      "settings": {
+        "about": "Sur",
+        "Settings": "Paramètres"
+        
+      }
+  }

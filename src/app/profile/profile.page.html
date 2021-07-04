@@ -1,0 +1,89 @@
+<ion-header>
+  <ion-toolbar color="light">
+
+    <div class="small" >
+      {{ "settings.profile" | translate }}
+    </div>
+    <ion-buttons slot="start">
+      <ion-button color="secondary" (click)="back()" >
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="welcome-card">
+    <ion-card-header>
+      <ion-card-subtitle>
+            <ion-label class="small">{{"settings.userProfile" | translate}}</ion-label>
+      </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content *ngFor="let user of userAsycuda">
+      <ion-grid>
+        <ion-row>
+            <ion-col>
+              <ion-item>
+                <ion-label  class="label1" stacked> 
+                 {{"settings.username" | translate }}
+                </ion-label>
+                <ion-badge color="success" slot="end">{{user.username}}</ion-badge>
+              </ion-item>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label  class="label1"  stacked>{{"settings.fullname" | translate }}</ion-label>
+              <ion-badge color="success" slot="end">{{user.fullname}}</ion-badge>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label  class="label1"  stacked>{{"settings.email" | translate }}</ion-label>
+              <ion-badge color="success" slot="end">{{user.email}}</ion-badge>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label  class="label1" stacked>{{"settings.country" | translate }}</ion-label>
+              <ion-badge color="success" slot="end">{{user.countryname}}</ion-badge>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label  class="label1"  stacked>{{"settings.roles" | translate }}</ion-label>
+              <ion-badge color="success" slot="end">{{roles}}</ion-badge>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label  class="label1"  stacked>{{"settings.offices" | translate }}</ion-label>
+              <ion-badge color="success" slot="end">{{office}}</ion-badge>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label  class="label1"  stacked>{{"settings.language" | translate}}</ion-label>
+              <ion-select class="label1"  [(ngModel)]='lang' (ionChange)='changeLanguage()'>
+                <ion-select-option value='en'>English</ion-select-option>
+                <ion-select-option value='fr'>French</ion-select-option>
+                <ion-select-option value='pt'>Portugues</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+</ion-card>
+</ion-content>

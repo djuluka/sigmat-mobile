@@ -1,35 +1,36 @@
 <ion-content>
-  <ion-slide>
-    <div class="body container">
-			<div class="card">
-				<div class="card-header">
-          <!--Imagem veio daqui: https://www.giz.de/en/worldwide/80051.html-->
-          <ion-img  src="./../assets/goods-in-transit.jpg"></ion-img>
-				</div>
-				<div class="card-body">
-				<!--	<span class="tag tag-pink">Login</span> -->
-            <ion-card-content>
-              <ion-item>
-                <ion-label  class="label" position="floating" stacked>Username</ion-label>
-                <ion-input color="dark" class="input"></ion-input>
-              </ion-item>
-    
-              <ion-item>
-                <ion-label class="label"  position="floating" stacked>Password</ion-label>
-                <ion-input color="dark" class="input" type="password" ></ion-input>
-              </ion-item>
-    
-              <div text-center margin-top>
-                <ion-button class="login"  type="submit" color="success" expand="block" (click)="login()" >Sign In</ion-button>
-              </div>
-            </ion-card-content>
-				</div>
+  <ion-header>
+    <ion-toolbar color="light">
+      <ion-buttons slot="middle">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+     
+    </ion-toolbar>
+  </ion-header> 
+  <img src="assets/icon.png" class="center" md> 
+  <ion-card>
+    <form (ngSubmit)="login()" >
+      <div class="card-header">
+        <ion-img src="./../assets/goods-in-transit.jpg"></ion-img>
       </div>
-    </div>
-  </ion-slide>
+      <ion-card-content>
+        <ion-item>
+          <ion-label class="label" position="fixed" stacked>Username</ion-label>
+          <ion-input color="dark" class="input" required [(ngModel)]="username" name="username"></ion-input>
+        </ion-item>
 
-  <!--
-  <button  class ="version" id="version">{{ version }}</button> -->
-  
+        <ion-item>
+          <ion-label class="label" position="fixed" stacked>Password</ion-label>
+          <ion-input color="dark" class="input" type="password" required [(ngModel)]="password" name="password">
+          </ion-input>
+        </ion-item>
+
+        <div text-center margin-top>
+          <ion-button class="login" type="submit" expand="block">Sign In</ion-button>
+
+        </div>
+      </ion-card-content>
+    </form>
+  </ion-card>
+
 </ion-content>
-

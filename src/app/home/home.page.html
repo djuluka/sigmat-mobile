@@ -1,84 +1,90 @@
-<ion-header>
+<ion-header class="new-background-color">
   <ion-toolbar color="light">
     <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
+      <ion-button color="secondary" (click)="settings()">
+        <ion-icon name="keypad-outline"></ion-icon>  
+      </ion-button>
     </ion-buttons>
     <ion-buttons slot="end">
       <ion-button color="secondary" (click)="logout()">
-        <ion-icon  name="exit-outline"></ion-icon>
+        <ion-icon name="lock-closed-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
     <ion-title translate>
-      
-      <div class="small" (click)="settings()">
-        Benvindo Jailson Costa
+      <div class="small" (click)="settings()" *ngFor="let user of userAsycuda" >
+        {{ "home.welcome" | translate }} {{user.fullname}}
       </div>
     </ion-title>
   </ion-toolbar>
+  <ion-card class="welcome-card" color="light">
+    <ion-toolbar>
+      <ion-searchbar search-icon="undefined" placeholder="Find ...." animated="true" showCancelButton="focus" cancelButtonText="Cancel" color="light" (ionInput)="filter($event)"></ion-searchbar>
+      <ion-avatar slot="end" (click)="Scan()">
+        <img src="/assets/barcode.jpg">
+      </ion-avatar>
+    </ion-toolbar>
+  </ion-card>
 </ion-header>
 
-<ion-content>
-  <ion-grid>
-     <ion-row>
-        <ion-col>
-           <ion-list lines="full"> 
-            <ion-item >
-                <ion-searchbar cancelButtonIcon  animated color="light" (ionInput)="getItems($event)"></ion-searchbar>
-                <ion-avatar slot="end" (click)="scanCode()">
-                    <img src="/assets/barcode.jpg">
-                </ion-avatar>
-            </ion-item>
-          </ion-list>
-        </ion-col>
-     </ion-row>
-  </ion-grid>
+<ion-content padding scrollbar-y-auto>
+  <ion-card class="welcome-card">
+  <ion-item-group>
+    <ion-item-divider color="light">
+      <h2 class="header-bold">Lista off T1 on Transit</h2>
+      <ion-buttons slot="end">
+        <ion-button color="secondary" (click)="refresh()">
+          <ion-icon name="refresh-circle-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item-divider>
+    <ion-list *ngIf="!t1JsonData.length">
+      <ion-item *ngFor="let item of [0, 1, 2]">
+        <ion-avatar slot="start">
+         <ion-skeleton-text animated> </ion-skeleton-text>
+        </ion-avatar>
+        <ion-label>
+          <h3>
+            <ion-skeleton-text animated style="width: 50%"> </ion-skeleton-text>
+          </h3>
+          <p>
+            <ion-skeleton-text animated style="width: 50%"> </ion-skeleton-text>
+          </p>
+          <p>
+            <ion-skeleton-text animated style="width: 50%"> </ion-skeleton-text>
+          </p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
 
-  <!--<ion-list lines="none">-->
-  <ion-list >
-    <ion-item-sliding animateItemSliding >
-        <ion-item  (click)="showDetails(item)" >
-          <ion-label><h2 class="headerbold">MRN </h2></ion-label>
-          <ion-label><h2 class="headerbold" >Date </h2></ion-label>
-          <ion-note slot="end"> <h2 class="headerbold" >Ori - Dest</h2></ion-note>  
-        </ion-item>
-      </ion-item-sliding>
+    <ion-list>
+      <ion-item-sliding *ngFor="let t1 of t1JsonData" style="padding:0px !important;">
+        <ion-item (click)="showDetails(t1)">
+          <ion-avatar slot="start">
+            <!--https://icons8.com/icons/set/truck-->
+            <img *ngIf="t1.ideSts == 'Exit'" src="assets/icon/icons8-customs-officer-512.png">
+            <img *ngIf="t1.ideSts == 'Initiated'" src="assets/icon/icons8-house-fence-512.png">
+            <img *ngIf="t1.ideSts == 'Created'" src="assets/icon/icons8-shipped-100.png">
+            <img *ngIf="t1.ideSts == 'Entered'" src="assets/icon/icons8-in-transit-512.png">
+          </ion-avatar>
+          <ion-label>
+            <h2 class="header-bold">{{t1.ideCuoDpaDat}}</h2>
+            <p class="header-small-secundary">{{t1.trpItyDsc}}</p>
+            <p class="header-small">{{t1.ideCuoDpaCod}} - {{t1.ideCuoDesCod}}</p>
+          </ion-label>
 
-      <ion-item-sliding animateItemSliding >
-        <ion-item  (click)="showDetails(item)" >
-          <ion-label fixed><h2 class="header">TGST1BFCT22020123</h2></ion-label>
-          <ion-label><h2 class="header" >25-07-2020</h2></ion-label>
-          <ion-note slot="end"> <h2 class="header" >TGFG1 - BFCT2</h2></ion-note>  
+          
+          <ion-note *ngIf="t1.ideSts == 'Exit'" class="border-entry-t1" slot="end">{{t1.ideMrn}}</ion-note>
+          <ion-note *ngIf="t1.ideSts == 'Initiated'" class="exit-t1" slot="end">{{t1.ideMrn}}</ion-note>
+          <ion-note *ngIf="t1.ideSts == 'Created'" class="created-t1" slot="end">{{t1.ideMrn}}</ion-note>
+          <ion-note *ngIf="t1.ideSts == 'Entered'" class="entered-t1" slot="end">{{t1.ideMrn}}</ion-note>
+         
         </ion-item>
       </ion-item-sliding>
-      <ion-item-sliding animateItemSliding >
-        <ion-item  (click)="showDetails(item)" >
-          <ion-label><h2 class="header">TGST1BFCT22020123 </h2></ion-label>
-          <ion-label><h2 class="header" >25-07-2020 </h2></ion-label>
-          <ion-note slot="end"> <h2 class="header" >TGFG1 - BFCT2</h2></ion-note>  
-        </ion-item>
-      </ion-item-sliding>
-
-      <ion-item-sliding animateItemSliding >
-        <ion-item  (click)="showDetails(item)" >
-          <ion-label><h2 class="header">TGST1BFCT22020123 </h2></ion-label>
-          <ion-label><h2 class="header" >25-07-2020 </h2></ion-label>
-          <ion-note slot="end"> <h2 class="header" >TGFG1 - BFCT2</h2></ion-note>  
-        </ion-item>
-      </ion-item-sliding>
-      <ion-item-sliding animateItemSliding >
-        <ion-item  (click)="showDetails(item)" >
-          <ion-label><h2 class="header">TGST1BFCT22020123 </h2></ion-label>
-          <ion-label><h2 class="header" >25-07-2020 </h2></ion-label>
-          <ion-note slot="end"> <h2 class="header" >TGFG1 - BFCT2</h2></ion-note>  
-        </ion-item>
-      </ion-item-sliding>
-
-      <ion-item-sliding animateItemSliding >
-        <ion-item  (click)="showDetails(item)" >
-          <ion-label><h2 class="header">TGST1BFCT22020123 </h2></ion-label>
-          <ion-label><h2 class="header" >25-07-2020 </h2></ion-label>
-          <ion-note slot="end"> <h2 class="header" >TGFG1 - BFCT2</h2></ion-note>  
-        </ion-item>
-      </ion-item-sliding>
-  </ion-list>
+    </ion-list>
+  </ion-item-group>
+  <!--<ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll> -->
+</ion-card>
 </ion-content>

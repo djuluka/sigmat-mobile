@@ -1,6 +1,13 @@
 // deposi passar mais main css
     .label{
-        font-size:12px;
+        font-size:16px;
+        color: #73AD21;
+        font-weight: bold;
+        
+    }
+
+    .label1{
+        font-size:10px;
         color: #73AD21;
         font-weight: bold;
         
@@ -15,10 +22,55 @@
     
 
     .input{
-        font-size:12px;
+        font-size:14px;
         font-weight: normal;
     }
 
     ion-icon {
         color: #73AD21;
     }
+
+    page-settings {
+        .scroll {
+            height: 100%
+        }
+    
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+
+    #map_canvas {
+        width: 90%;
+        height: 80%;
+        border: 1px solid red;
+      }
+      
+      
+      #address {
+        padding: 10px;
+        font-size: 18px;
+        font-weight: bold;
+      }
+      
+      #map {
+        width: 100%;
+        height: 70vh;
+      }
+      
+      .map-wrapper {
+        position: relative;
+      
+        #map_center {
+          position: absolute;
+          z-index: 99;
+          height: 40px;
+          width: 40px;
+          top: 50%;
+          left: 50%;
+          margin-left: -21px;
+          margin-top: -41px;
+        }
+      }

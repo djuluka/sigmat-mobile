@@ -1,0 +1,359 @@
+<ion-header>
+  <ion-toolbar color="light">
+
+    <div class="small">
+      Details [{{currentT1.ideMrn}}]
+    </div>
+    <ion-buttons slot="start">
+      <ion-button color="secondary" (click)="back()">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-card class="welcome-card">
+    <ion-card-header>
+      <ion-card-subtitle>
+        <ion-item-divider>
+          <ion-label class="small">Operations</ion-label>
+        </ion-item-divider>
+      </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-row>
+        <ion-col *ngIf="currentT1.ideSts == 'Created'">
+          <ion-button color="primary" size="small" shape="round" (click)="operationAlertConfirm()" >Departure</ion-button>
+        </ion-col>
+        <ion-col *ngIf="currentT1.ideSts == 'Initiated'">
+          <ion-button color="danger" size="small" shape="round" (click)="operationAlertConfirm()">Border Exit</ion-button>
+        </ion-col>
+        <ion-col *ngIf="currentT1.ideSts == 'Exit'">
+          <ion-button color="warning" size="small" shape="round" (click)="operationAlertConfirm()">Border Entry</ion-button>
+        </ion-col>
+        <ion-col *ngIf="currentT1.ideSts == 'Entered'">
+          <ion-button color="danger" size="small" shape="round" (click)="operationAlertConfirm()">Validate Arrival</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+  <!--General info -->
+  <ion-card class="welcome-card">
+    <ion-card-header>
+      <ion-card-subtitle color="danger">
+        <ion-item-divider>
+          <ion-label class="small">General Segment</ion-label>
+        </ion-item-divider>
+      </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-label>
+              <h2 class="headerbold">Departure</h2>
+            </ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-label>
+              <h2 class="headerbold">Destination</h2>
+            </ion-label>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-label>
+              <h2 class="headerboldSecundary">{{currentT1.ideCuoDpaCod}}</h2>
+            </ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-label>
+              <h2 class="headerboldSecundary">{{currentT1.ideCuoDesCod}}</h2>
+            </ion-label>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-label>
+              <h2 class="headerbold">Condignee</h2>
+            </ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-label>
+              <h2 class="headerbold">Declarant</h2>
+            </ion-label>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-label>
+              <h2 class="headerboldSecundary">{{currentT1.cmpConNam}}</h2>
+            </ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-label>
+              <h2 class="headerboldSecundary">{{currentT1.decNam}}</h2>
+            </ion-label>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-label>
+              <h2 class="headerbold">Country off Export</h2>
+            </ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-label>
+              <h2 class="headerbold">Country off Destination</h2>
+            </ion-label>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-label>
+              <h2 class="headerboldSecundary">{{currentT1.genCtyEptNam}}</h2>
+            </ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-label>
+              <h2 class="headerboldSecundary">{{currentT1.genCtyDesNam}}</h2>
+            </ion-label>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </ion-card-content>
+  </ion-card>
+<!--
+  <ion-card class="welcome-card">
+    <ion-card-header>
+      <ion-card-subtitle>
+        <ion-item-divider>
+          <ion-label class="small">Itinerary</ion-label>
+        </ion-item-divider>
+      </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-label>
+              <h2 class="headerbold">Country Code</h2>
+            </ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-label>
+              <h2 class="headerbold">Code Office</h2>
+            </ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-label>
+              <h2 class="headerbold">Office name</h2>
+            </ion-label>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col *ngFor="let value of arr1">
+            <ion-label>
+              <h2 class="headerboldSecundary">{{value}}</h2>
+            </ion-label>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col *ngFor="let value of arr2">
+            <ion-label>
+              <h2 class="headerboldSecundary">{{value}}</h2>
+            </ion-label>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col *ngFor="let value of arr3">
+            <ion-label>
+              <h2 class="headerboldSecundary">{{value}}</h2>
+            </ion-label>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col *ngFor="let value of arr4">
+            <ion-label>
+              <h2 class="headerboldSecundary">{{value}}</h2>
+            </ion-label>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </ion-card-content>
+  </ion-card>
+  <ion-card class="welcome-card">
+    <ion-card-header>
+      <ion-card-subtitle>
+        <ion-item-divider>
+          <ion-label class="small">Goods Information</ion-label>
+        </ion-item-divider>
+      </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content *ngFor="let value of goodInfo">
+      <ion-row>
+        <ion-col>
+          <ion-label>
+            <h2 class="headerbold">Commodity Code</h2>
+          </ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-label>
+            <h2 class="headerboldSecundary">{{value.itmTarHscNb1}}</h2>
+          </ion-label>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-label>
+            <h2 class="headerbold">Desc. off Goods</h2>
+          </ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-label>
+            <h2 class="headerboldSecundary">{{value.gdsDsc}}</h2>
+          </ion-label>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-label>
+            <h2 class="headerbold">Marks & Numbers</h2>
+          </ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-label>
+            <h2 class="headerboldSecundary">{{value.pckMrk}}</h2>
+          </ion-label>
+        </ion-col>
+
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-label>
+            <h2 class="headerbold">Numbers & Kind</h2>
+          </ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-label>
+            <h2 class="headerboldSecundary">{{value.pckNbr}} - {{value.pckTypCod}} - {{value.pckTypNam}}</h2>
+          </ion-label>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-label>
+            <h2 class="headerbold">Containers</h2>
+          </ion-label>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-label>
+            <h2 class="headerboldSecundary">{{value.gdsCtnCt1}} / {{value.gdsCtnCt2}}</h2>
+          </ion-label>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-label>
+            <h2 class="headerbold">Documents</h2>
+          </ion-label>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-label>
+            <h2 class="headerboldSecundary">{{value.attAt1Cod}} / {{value.attAt1Ref}}</h2>
+          </ion-label>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-label>
+            <h2 class="headerboldSecundary">{{value.attAt2Cod}} / {{value.attAt2Ref}}</h2>
+          </ion-label>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-label>
+            <h2 class="headerboldSecundary">{{value.attAt3Cod}} / {{value.attAt3Ref}}</h2>
+          </ion-label>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-label>
+            <h2 class="headerboldSecundary">{{value.attAt4Cod}} / {{value.attAt4Ref}}</h2>
+          </ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+  <ion-card class="welcome-card">
+    <ion-card-header>
+      <ion-card-subtitle>
+        <ion-item-divider>
+          <ion-label class="small">Transport Information</ion-label>
+        </ion-item-divider>
+      </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-row>
+        <ion-col>
+          <ion-label>
+            <h2 class="headerbold">Transport Identity</h2>
+          </ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-label>
+            <h2 class="headerbold">Nacionality</h2>
+          </ion-label>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-label>
+            <h2 class="headerboldSecundary">ST-84-TC</h2>
+          </ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-label>
+            <h2 class="headerboldSecundary">Capverdian</h2>
+          </ion-label>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-label>
+            <h2 class="headerbold">Driver Id/Licence</h2>
+          </ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-label>
+            <h2 class="headerbold">Driver Name</h2>
+          </ion-label>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-label>
+            <h2 class="headerboldSecundary">SA-9857T</h2>
+          </ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-label>
+            <h2 class="headerboldSecundary">Jailson Costa</h2>
+          </ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>-->
+</ion-content>

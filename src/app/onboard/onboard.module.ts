@@ -6,6 +6,9 @@ import { IonicModule } from '@ionic/angular';
 
 import { OnboardPageRoutingModule } from './onboard-routing.module';
 
+// translate 
+import { TranslateModule } from '@ngx-translate/core';
+
 import { OnboardPage } from './onboard.page';
 
 @NgModule({
@@ -13,7 +16,8 @@ import { OnboardPage } from './onboard.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    OnboardPageRoutingModule
+    OnboardPageRoutingModule,
+    TranslateModule
   ],
   declarations: [OnboardPage]
 })

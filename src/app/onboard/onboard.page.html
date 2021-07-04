@@ -1,9 +1,67 @@
-<ion-content>
-  <ion-slide>
+<ion-content fullscreen>
+  <ion-header class="ion-no-border">
+    <ion-toolbar>
+      <ion-buttons slot="middle">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+    <ion-card>
+      <div class="card-header">
+        <ion-img src="./../assets/img/containers_rdax_782x521.jpg"></ion-img>
+      </div>
+      <ion-card-header>
+        <ion-card-subtitle class="label1">Promoting Trade in West Africa II </ion-card-subtitle>
+        <ion-card-title class="label">WATIP II</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <small>The project is part of the Trade Facilitation West Africa Programme (TFWA) and
+          is being financed by the European Union (15 million Euro) and the German Federal
+          Ministry for Economic Cooperation and Development (BMZ) (4 million Euro).
+        </small>
+      </ion-card-content>
+      <ion-footer>
+        <ion-row>
+          <ion-col center text-center>
+            <div style="text-align: center;">
+              <span (click)="skip()" class="tag tag-primary ">
+                {{ "onboard.skip" | translate }}
+              </span>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-footer>
+    </ion-card>
+
+
+  <!-- <ion-card>
+    <ion-item href="#" class="ion-activated">
+      <ion-icon name="wifi" slot="start"></ion-icon>
+      <ion-label>Card Link Item 1 activated</ion-label>
+    </ion-item>
+  
+    <ion-item href="#">
+      <ion-icon name="wine" slot="start"></ion-icon>
+      <ion-label>Card Link Item 2</ion-label>
+    </ion-item>
+  
+    <ion-item class="ion-activated">
+      <ion-icon name="warning" slot="start"></ion-icon>
+      <ion-label>Card Button Item 1 activated</ion-label>
+    </ion-item>
+  
+    <ion-item>
+      <ion-icon name="walk" slot="start"></ion-icon>
+      <ion-label>Card Button Item 2</ion-label>
+    </ion-item>
+  </ion-card> -->
+  <!-- <ion-slide>
     <div class="body container">
 			<div class="card">
 				<div class="card-header">
-          <!--Imagem veio daqui: https://www.giz.de/en/worldwide/80051.html-->
+         
           <ion-img  src="./../assets/img/containers_rdax_782x521.jpg"></ion-img>
 				</div>
 				<div class="card-body">
@@ -21,35 +79,17 @@
 						<img src="./../assets/img/user-1.jpg" alt="user 1" />
 						<div class="user-info">
 							<small>GIZ/ECOWAS</small>
-							<!-- <small>2h ago</small>-->
+					
 						</div>
 					</div>
 				</div>
       </div>
     </div>
-  </ion-slide>
- <!--
-  <ion-slide>
-    <div class="diag" style="background: url('assets/img/whitebg.svg') no-repeat">
-      <ion-icon ios="ios-trophy" md="md-trophy" color="primary"></ion-icon>
-    </div>
-    <div >
-      <h2>set personal goals</h2>
-      <h4>Why is the Tesla Cybertruck designed the way it is?</h4>
-    </div>
-  </ion-slide>
+  </ion-slide> -->
 
-  <ion-slide>
-    <div class="diag" style="background: url('assets/img/whitebg.svg') no-repeat">
-      <ion-icon ios="ios-chatboxes" md="md-chatboxes" color="primary"></ion-icon>
-    </div>
-    <div>
-      <h2>chat with others</h2>
-      <p>inspire and help each other reach fitness and diet goals.</p>
-    </div>
-  </ion-slide> 
-  
-  
--->
-  <button (click)="skip()" id="skip">{{ skipMsg }}</button>
+
+
+
 </ion-content>
+
+<!--Imagem veio daqui: https://www.giz.de/en/worldwide/80051.html-->

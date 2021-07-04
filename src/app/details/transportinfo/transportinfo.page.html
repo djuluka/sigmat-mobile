@@ -1,0 +1,134 @@
+<ion-header>
+  <ion-toolbar color="light">
+
+    <div class="small">
+      Details [{{currentT1.ideMrn}}]
+    </div>
+    <ion-buttons slot="start">
+      <ion-button color="secondary" (click)="back()">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="welcome-card">
+    <ion-card-header>
+      <ion-card-subtitle>
+        <ion-item-divider>
+          <ion-label class="small">Itinerary</ion-label>
+        </ion-item-divider>
+      </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-label>
+              <h2 class="headerbold">Country Code</h2>
+            </ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-label>
+              <h2 class="headerbold">Code Office</h2>
+            </ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-label>
+              <h2 class="headerbold">Office name</h2>
+            </ion-label>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col *ngFor="let value of arr1">
+            <ion-label>
+              <h2 class="headerboldSecundary">{{value}}</h2>
+            </ion-label>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col *ngFor="let value of arr2">
+            <ion-label>
+              <h2 class="headerboldSecundary">{{value}}</h2>
+            </ion-label>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col *ngFor="let value of arr3">
+            <ion-label>
+              <h2 class="headerboldSecundary">{{value}}</h2>
+            </ion-label>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col *ngFor="let value of arr4">
+            <ion-label>
+              <h2 class="headerboldSecundary">{{value}}</h2>
+            </ion-label>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </ion-card-content>
+  </ion-card>
+  <ion-card class="welcome-card">
+    <ion-card-header>
+      <ion-card-subtitle>
+        <ion-item-divider>
+          <ion-label class="small">Transport Information</ion-label>
+        </ion-item-divider>
+      </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-row>
+        <ion-col>
+          <ion-label>
+            <h2 class="headerbold">Transport Identity</h2>
+          </ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-label>
+            <h2 class="headerbold">Nacionality</h2>
+          </ion-label>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-label>
+            <h2 class="headerboldSecundary">ST-84-TC</h2>
+          </ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-label>
+            <h2 class="headerboldSecundary">Capverdian</h2>
+          </ion-label>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-label>
+            <h2 class="headerbold">Driver Id/Licence</h2>
+          </ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-label>
+            <h2 class="headerbold">Driver Name</h2>
+          </ion-label>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-label>
+            <h2 class="headerboldSecundary">SA-9857T</h2>
+          </ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-label>
+            <h2 class="headerboldSecundary">Jailson Costa</h2>
+          </ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

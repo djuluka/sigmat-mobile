@@ -1,0 +1,21 @@
+https://ionicframework.com/docs/deployment/play-store
+
+1 - keytool -genkey -v -keystore my-release-key.keystore -alias alias_name -keyalg RSA -keysize 2048 -validity 10000
+2 - jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore /home/jailson/Documentos/mobile/platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk realead_key
+3 - zipalign -v 4 /home/jailson/Documentos/mobile/platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk eTransit.apk
+
+Caso queira ver os certificados que tem disponivel para assinatura
+4 - keytool -v -list -keystore my-release-key.keystore
+
+
+
+
+
+
+
+# charts 
+npm install angular-google-charts --save
+
+https://medium.com/swlh/using-google-charts-with-angular-and-asp-net-core-web-api-7feaf0032377
+
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/

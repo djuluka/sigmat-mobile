@@ -1,0 +1,38 @@
+ionic serve --lab
+
+
+ionic cordova run ios
+ionic cordova run android
+ionic run android -l 
+
+    
+# ip is to avoid localhost:8100
+ionic cordova run android  -l --livereload-host 192.168.43.104
+ionic cordova run android  -l --livereload-host 10.0.10.123
+ionic cordova run android  -l --livereload-host 192.168.1.252
+ionic cordova run android  -l --livereload-host 127.0.0.1
+ionic cordova run android  -l --livereload-host 10.16.4.128
+# erros os TEXT_ is https to
+
+se persitir o erro run 
+ionic cordova run android 
+ionic cordova run android  -l --livereload-host 192.168.1.252
+
+192.168.2.124
+
+######## [ERROR] Could not find or parse valid build output file.
+ionic cordova platform rm android 
+ionic cordova platform add android
+
+npm i -g cordova-res
+ionic cordova resources android --force
+ionic cordova run android 
+
+
+
+
+
+####### 
+https://www.howtogeek.com/444596/how-to-change-the-default-shell-to-bash-in-macos-catalina/
+chsh -s /bin/bash
+chsh -s /bin/zsh

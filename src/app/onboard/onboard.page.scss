@@ -51,7 +51,7 @@
 	border-radius: 10px;
 	box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
 	overflow: hidden;
-	width: 300px;
+	width: 200px;
 }
 
 .card-header img {
@@ -99,6 +99,28 @@
 	background-color: #c62bcb;
 }
 
+.tag-primary {
+	background-color: #73AD21;
+}
+
+.tag-secundary {
+	background-color: #aa5377;
+}
+
+.label{
+    font-size:20px;
+    color: #73AD21;
+    font-weight: bold;
+    
+}
+.label1{
+    font-size:12px;
+    color: #aa5377;
+    font-weight: bold;
+    
+}
+
+
 .user {
 	display: flex;
 	margin-top: auto;
@@ -131,3 +153,11 @@
 
 
 
+
+ion-toolbar {
+      --background: transparent;
+      --ion-color-base: transparent !important;
+}
+
+
+  

@@ -1,19 +1,42 @@
 {
-    "Title" :"Benvindos a Alfandegas de Cabo Verde",
-    "Welcone_Text" :"Agora a aplicacao o Sydonia World tornou mobile, as operacoes mais importantes ja estao a distancia do seu dedo. Disfrute",
-    "Slogan" : "Benvindos a Alfandegas 2.0",
-    "Declaration" : "Declaracao",
-    "Transit" : "Transito",
-    "Exit Note" : "Pode Sair",
-    "Inspection Act" : "Certificado Visita",
-    "Details" : "Detalhes",
-    "List" : "Lista",
-    "Search" :"Procura",
-    "Bar Code" : "Cadigo Barra",
-    "QRCode" : "QRCode",
-    "Ship Arrival" : "Aviso Chegada",
-    "Home" : "Home",
-    "Send" : "Enviar",
-    "Time" : "Hora",
-    "Date" : "Data"
-}
+    "onboard": {
+        "skip":"Saltar"
+    },
+    "home": {
+        "welcome": "Benvindo"
+
+    },
+    "login": {
+        "tabName": "Tab One goes here",
+        "invite": "Now you have selected {{lang}}",
+        "languageChangePlaceholder": "Change language"
+      },
+      "details": {
+        "tabName": "Tab One goes here",
+        "invite": "Now you have selected {{lang}}",
+        "languageChangePlaceholder": "Change language"
+      },
+      "settings": {
+        "general": "Cordenadas do Office",
+        "cordenadasActuais": "Cordenadas do Actuais",
+        "profile": "Perfil",
+        "geolocalization": "Geolocalizacao",
+        "language": "Lingua",
+        "username":"Conta de Utilizador",
+        "fullname":"Nome Completo",
+        "email":"Email",
+        "country":"Pais",
+        "roles":"Regras",
+        "offices":"Estancia Aduaneira",
+        "device":"Id",
+        "longitude":"Longitude",
+        "latitude":"Latitude",
+        "address":"Endereço",
+        "userProfile":"Perfil do Utilizador",
+        "office":"Estancia e Geolocalização",
+        "estadoOperacoes":"Estado das Operacoes",
+        "distancePermited":"Distancia Permitida",
+        "officeDistance": "Distancia do Office"
+        
+      }
+  }

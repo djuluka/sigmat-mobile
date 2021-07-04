@@ -1,77 +1,151 @@
-ion-icon {
-    color: #73AD21;
+.small {
+  color: #73ad21;
+  font-size: 12px;
+  font-weight: bold;
+  padding-left: 25px;
 }
 
-.small{
-    color: #73AD21;
-    font-size:12px;
-    font-weight: bold;
-    padding-left: 25px;
+.logo {
+  padding: 20px;
+  width: 300px;
+  height: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.2;
 }
-
-.logo{
-    padding: 20px;
-    width: 300px; 
-    height: 300px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    opacity: 0.2;
-}
-
-
-
 
 .user {
-	display: flex;
-	margin-top: auto;
+  display: flex;
+  margin-top: auto;
 }
 
 .user img {
-	border-radius: 50%;
-	margin-right: 10px;
-	height: 40px;
-	width: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  height: 40px;
+  width: 40px;
 }
 
 .user-info h5 {
-	margin: 0;
+  margin: 0;
 }
 
 .user-info small {
-	color: #888785;
+  color: #888785;
 }
-
 
 .ion-searchbar {
-    --color	:#73AD21;
-    --icon-color:#73AD21;
+  --color: #73ad21;
+  --icon-color: #73ad21;
+  font-size: 10px;
 }
 
-.headerbold{
-    font-size:10px;
-    color: #78c288;
-    font-weight: bold;
+.header-bold {
+  font-size: 10px;
+  // color: #78c288;
+  color: #73ad21;
+  font-weight: bold;
+}
+.header-small {
+  font-size: 9px;
+  color: #73ad21;
+  font-weight: bold;
+}
+.header-small-secundary {
+  font-size: 9px;
+  color: #73ad21;
 }
 
-.header{
-    font-size:10px;
-    color: #78c288;
-    font-weight: mornal;
+.headerboldSecundary {
+  font-size: 10px;
+  color: #aa5377;
+  font-weight: bold;
+}
+
+.header {
+  font-size: 10px;
+  color: #73ad21;
+  font-weight: mornal;
+}
+.exit-t1 {
+  font-size: 10px;
+  color: #ff4136;
+  font-weight: bold;
+}
+.departure-t1 {
+  font-size: 10px;
+  color: #73ad21;
+  font-weight: bold;
+}
+.border-entry-t1 {
+  font-size: 10px;
+  color: #ff851b;
+  font-weight: bold;
+}
+.arrive-t1 {
+  font-size: 10px;
+  color: #73ad21;
+  font-weight: bold;
+}
+.entered-t1 {
+  font-size: 10px;
+  color: #73ad21;
+  font-weight: bold;
+}
+.created-t1 {
+  font-size: 10px;
+  color: #73ad21;
+  font-weight: bold;
 }
 
 ion-list {
-   //padding:7px !important;
-   padding-right: 10px;
+  //padding:7px !important;
+  padding-right: 10px;
 }
 
 ion-item {
-    --min-height: 16px;
-    padding-top:2px !important;
+  --min-height: 16px;
+  padding-top: 2px !important;
 }
 
+ion-icon {
+  color: #aa5377;
+}
 
 :root {
-    --ion-safe-area-top: 20px;
-    --ion-safe-area-bottom: 22px;
+  --ion-safe-area-top: 20px;
+  --ion-safe-area-bottom: 22px;
+}
+
+ion-avatar {
+  max-width: 50px;
+  max-height: 50px;
+  margin: 10px;
+  border-radius: 50%;
+}
+
+ion-searchbar {
+  --icon-color: var (--ion-color-primary);
+  --box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  ::ng-deep {
+    .searchbar-input-container {
+      .searchbar-input {
+        border-radius: 2px;
+        //any style that you want to implement on your searchbar
+        height: 10%;
+      }
+    }
   }
+}
+
+.new-background-color {
+  --background: #1b1d1a;
+}
+/*
+.circle-pic{
+    width:50px;
+    height:50px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+} */

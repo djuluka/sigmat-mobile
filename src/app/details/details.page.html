@@ -1,49 +1,18 @@
-<ion-header>
-  <ion-toolbar color="light">
+<ion-tabs> 
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="generalinfo">
+      <ion-icon name="folder-sharp"></ion-icon>
+      <ion-label class="label">General Segment</ion-label>
+    </ion-tab-button> 
 
-    <div class="small" >
-      Details [TGST1BFCT22020123]
-    </div>
-    <ion-buttons slot="start">
-      <ion-button color="secondary" (click)="back()" >
-        <ion-icon name="arrow-back-outline"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
-
-
-<ion-content>
-  <ion-card class="welcome-card">
-    <ion-card-header>
-      <ion-card-subtitle>
-            <ion-label class="small">General Segment</ion-label>
-      </ion-card-subtitle>
-    </ion-card-header>
-    <ion-card-content>
-     
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card class="welcome-card">
-    <ion-card-header>
-      <ion-card-subtitle>
-            <ion-label class="small">Itinerary</ion-label>
-      </ion-card-subtitle>
-    </ion-card-header>
-    <ion-card-content>
-     
-    </ion-card-content>
-  </ion-card>
-  <ion-card class="welcome-card">
-    <ion-card-header>
-      <ion-card-subtitle>
-            <ion-label class="small">Transport Information</ion-label>
-      </ion-card-subtitle>
-    </ion-card-header>
-    <ion-card-content>
-     
-    </ion-card-content>
-  </ion-card>
-</ion-content>
-
+    <ion-tab-button tab="transportinfo">
+      <ion-icon name="bus-sharp"></ion-icon>
+      <ion-label class="label">Transport</ion-label>
+    </ion-tab-button> 
+    
+    <ion-tab-button tab="goodsinfo">
+      <ion-icon name="reorder-four-sharp"></ion-icon>
+      <ion-label class="label">Goods </ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

@@ -3,17 +3,15 @@ import {
     HttpHandler,
     HttpEvent,
     HttpInterceptor,
-    HttpResponse,
-    HttpErrorResponse
   } from '@angular/common/http';
 
 import { Injectable } from '@angular/core';
-import { Observable, throwError } from 'rxjs';
-import { map, catchError } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 import {
     Router
   } from '@angular/router';
 import { ToastController } from '@ionic/angular';
+import { StoragesService } from '../device/storages.service';
 
 
 
@@ -22,22 +20,23 @@ import { ToastController } from '@ionic/angular';
   })
 export class TokenInterceptor implements HttpInterceptor {
 
-    constructor(private router: Router, public toastController: ToastController) {
+    constructor(private router: Router, public toastController: ToastController,private storageToken: StoragesService) {
     }
 
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-        console.log('JwtInterceptorService Req:', req);
-        const token = localStorage.getItem('access_token');
 
-        /*if (token) {
+        const token = this.storageToken.getToken();
+        
+        if (token) {
+         console.log('storageToken inteceptoon: ', token);
             req = req.clone({
             setHeaders: {
-                'Authorization': token
+                Authorization: `Bearer ${token}` 
             }
             });
-        }*/
+        }
         return next.handle(req);
     }
-
-
 }
+
+// https://www.thirdrocktechkno.com/blog/how-to-integrate-interceptor-in-angular-9/
