@@ -10,6 +10,8 @@ export const environment = {
   //t1Url: 'https://41.215.215.21:8443',
   //api: 'http://192.168.1.252:8443',
   //api: 'https://192.168.2.124:8443',
+  //api: 'https://127.0.0.1:8443',
+  //api: 'https://localhost:8443',
   api: 'http://127.0.0.1:8080',
   api2:'http://sydonia.otr.tg:8080/awclient/',
 };

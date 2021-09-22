@@ -15,7 +15,7 @@ import { StoragesService } from '../device/storages.service';
 })
 export class AuthService {
 
-  apiUrl = 'http://localhost:8080/authenticate';
+  apiUrl = 'https://localhost:8080/authenticate';
   apiUrlLogout = 'http://localhost:8089/auth/realms/rtis/protocol/openid-connect/logout';
   clientId = 'spring-boot-app';
   username = 'user';
@@ -30,7 +30,7 @@ export class AuthService {
       username: username,
       password: password,
     };
-    //return this.httpClient.post<any>('http://localhost:8080/authenticate', body)
+    //return this.httpClient.post<any>('https://localhost:8443/authenticate', body)
     return this.httpClient.post<any>(environment.api+'/authenticate', body)
       .pipe(map(data => {
         this.storage.saveToken(data.token);

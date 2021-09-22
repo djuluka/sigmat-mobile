@@ -36,3 +36,13 @@ ionic cordova run android
 https://www.howtogeek.com/444596/how-to-change-the-default-shell-to-bash-in-macos-catalina/
 chsh -s /bin/bash
 chsh -s /bin/zsh
+
+
+
+
+# ionic run android -c -s -l
+Will workfine
+
+Ispect
+
+chrome://inspect/#devices
