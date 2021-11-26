@@ -9,12 +9,14 @@
 *.sublime-project
 *.sublime-workspace
 .DS_Store
+*.md
+*.txt
 Thumbs.db
 UserInterfaceState.xcuserstate
 $RECYCLE.BIN/
 
 *.log
-log.txt
+*.txt
 npm-debug.log*
 
 /.idea
